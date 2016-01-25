@@ -1,0 +1,13 @@
+<!-- Sport View -->
+<div class="upcomingEvt ">
+    <div class="row">
+    <div class="col-sm-12">
+<div ng-repeat="obj in data" class="rowclass">
+    <div>{{obj.event_datetime}}</div>
+    <div>{{obj.event_type}}</div>
+    <div>{{obj.adress_format}}</div>
+    <div><button ng-click="BookNow(obj.event_id)" class="btn btn-primary">BOOK NOW</button></div>
+</div>
+</div>
+</div>
+</div>

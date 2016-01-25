@@ -1,0 +1,50 @@
+	  <div class="row">
+      <div class="col-sm-12">
+  <div class="btn-group btn-group-justified">
+      <div class="btn-group" role="group">
+    <button type="button"  ng-click="evevtSelection()" class="btn btn-primary">Football</button>
+          </div>
+          <div class="btn-group" role="group">
+    <button type="button"  ng-click="evevtSelection()" class="btn btn-primary">Tennis</button>
+          </div>
+  </div>
+      </div>
+      </div>
+    <br>
+     <div class="row">
+      <div class="col-sm-12">
+  <div class="btn-group btn-group-justified">
+       <div class="btn-group" role="group">
+    <button type="button"  ng-click="evevtSelection()" class="btn btn-primary">Prokabaddi</button>
+          </div>
+           <div class="btn-group" role="group">
+    <button type="button"  ng-click="evevtSelection()" class="btn btn-primary">Cricket</button>
+         </div>
+  </div>
+      </div>
+      </div><br>
+    
+<div class="upcomingEvt" id="alternate_color">
+    <div class="row">
+<div class="col-sm-12">
+<p><strong>UPCOMING EVENT</strong></p>
+	
+
+		
+<div ng-repeat="obj in datalists | limitTo: paginationLimit()" class="rowclass">
+        
+        
+      <div >{{obj.event_datetime}}</div>	
+     <div >{{obj.event_type}}</div>
+	<div><button type="button" ng-click="BookTicket(obj.event_id)" class="btn btn-primary">BOOK NOW</button></div>
+    
+    
+</div>
+     <div class="pagination pagination-centered">
+    <button class="btn btn-info" ng-show="hasMoreItemsToShow()" ng-click="showMoreItems()">Show more</button>
+
+</div>
+</div>
+</div>
+
+</div>

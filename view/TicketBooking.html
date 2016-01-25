@@ -1,0 +1,41 @@
+<!-- Ticket booking View -->
+<div ng-repeat="obj in item1" class="rowclass" >
+    <div class="standcolor">
+<div class="row">
+    <div class="col-xs-9">
+           <label>Category:{{obj.seat_cat}}</label>
+          </div>
+    <!--Selecting multiple seats and setting id according to seat_cat_id-->
+    <div class="col-xs-3">
+        <select  ng-model="obj.seatCount" ng-options="i for i in range" class="noOfSeats">
+            
+            <option value="" selected="selected" >Seats</option>
+           
+        </select>
+       
+        
+    </div>
+    </div>
+        <div class="row">
+        
+        <div class="col-xs-9">
+            </div>
+                        <div class="col-xs-3">
+             <label id="{{obj.seat_cat}}" class="selectSeat"></label>
+            </div>
+    
+        </div>
+    <br />
+    
+<div class="row">
+    <div class="col-xs-9">
+       <label ng-model="obj.price">Price:{{obj.price}}</label>
+    </div>
+    <div class="col-xs-3 align-right">
+        
+      <button type="button" class="btn btn-primary" ng-click="TicketSummary(obj)">BUY</button>
+    </div>
+</div>
+    </div>
+    <br>
+</div>

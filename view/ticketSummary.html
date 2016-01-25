@@ -1,0 +1,190 @@
+<!-- Ticket summary view -->
+<div id="ticketSum">
+
+<h1>Ticket Summary</h1>
+    <div>
+    <label>FC GOA VS CHENNYIN FC<br/>
+         <small>Jawaharlal Nehru stadium, goa</small>
+    </label>
+        <div class="row">
+        <div class="col-xs-2">
+         <img src="images/clock118.png" class="img-responsive">
+            </div>
+            <div class="col-xs-10">
+                    <label>Sunday, <time>7.00pm</time><br>December 20, 2015 </label>
+            </div>
+        
+       
+        </div>
+        <div class="row">
+        <div class="col-xs-2">
+         <img src="images/profile14.png" class="img-responsive">
+            </div>
+            <div class="col-xs-10">
+                    <label>Quantity <br>{{seatCount}} Ticket(s)</label>
+            </div>
+        
+       
+        </div>
+    <div class="row">
+        <div class="col-xs-12">
+            <div class="input-group">
+                    <input name="promo" value="" class="form-control" placeholder="Enter Promo Code" type="text" >
+                        <span class="input-group-btn">
+                                <button class="btn btn-warning" type="submit">APPLY</button>
+                        </span>
+            </div>
+            </div>
+        
+    </div>
+        <br>
+        <div id="hr"></div>
+        <div class="row">
+        
+        <div class="col-xs-8">
+      Sub Totals
+    </div>
+    <div class="col-xs-4">
+      Rs. {{SubTotal}}
+    </div>
+        
+        
+        </div>
+        <div class="row">
+        
+        <div class="col-xs-8">
+      Service Charge
+    </div>
+    <div class="col-xs-4">
+     Free
+    </div>
+        
+        
+        </div>
+        <div class="row">
+        
+        <div class="col-xs-8">
+     Service Tax 14.00%
+    </div>
+    <div class="col-xs-4">
+      Rs. 0.00
+    </div>
+        
+        
+        </div>
+        <div class="row">
+        
+        <div class="col-xs-8">
+      Courier Charge
+    </div>
+    <div class="col-xs-4">
+      Rs. 0.00
+    </div>
+        
+        
+        </div>
+        <div class="row">
+        
+        <div class="col-xs-8">
+      Payment Gateway
+            <br>Charge 2.5%
+    </div>
+    <div class="col-xs-4">
+      Rs. 00.0
+    </div>
+        
+        
+        </div>
+        
+        <br>
+        <div id="hr"></div>
+        <div class="row">
+        
+        <div class="col-xs-6">
+      Total
+    </div>
+    <div class="col-xs-6">
+      Rs. {{SubTotal}}
+    </div>
+        
+      
+        </div>
+        
+       <h1>Billing Details</h1>   
+          <div class="row">
+        
+        <div class="col-xs-12">
+      <form>
+        <div class="form-group">
+            <label class="sr-only" for="fullName">Full Name</label>
+            <input type="text" class="form-control" id="fullName" placeholder="Full Name" ng-model="customer.full_name" >
+              <label id="fname" style="color:red;"></label>
+        </div>
+       
+          <div class="form-group">
+            
+            <input type="email" class="form-control" id="inputEmail" placeholder="Email" ng-model="customer.Email">
+              <label id="mail" style="color:red;"></label>
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="mobileNum">Mobile Number</label>
+            <input type="number" class="form-control" id="mobileNum" placeholder="Mobile Number" ng-model="customer.mob_num">
+            <label id="mob" style="color:red;"></label>
+        </div>
+        <div class="form-group">
+            <label class="sr-only" for="address">Address</label>
+            <input type="text" class="form-control" id="address" placeholder="Address" ng-model="customer.cust_address">
+            <label id="add" style="color:red;"></label>
+        </div>
+        
+          <label for="state">SELECT PAYMENT</label>
+          <div class="row">
+            
+             <div class="col-xs-12 text-center">
+                <!-- <button class="btn btn-warnin" type="button"><img src="images/payu_payment_methods_copy-48.png"></button>-->
+              <span class="input-group-btn">
+                        <button class="btn btn-default " type="submit"><img src="images/PayU.png" class="img-responsive paypal"></button>
+                        
+              </span>
+        </div>
+           
+          </div>
+           <div id="paymentd">
+             <div class="row">
+        
+        <div class="col-xs-6">
+     <label>Total</label> 
+    </div>
+    <div class="col-xs-6">
+         <label>Rs. {{SubTotal}} </label> 
+     
+    </div>
+        
+      
+        </div>
+                <div class="row">
+             <div class="col-xs-12 text-center">
+             
+                   <button class="btn btn-danger" type="button" ng-click="custvalidation(customer)">MAKE PAYMENT</button>
+
+                </div>
+               </div>
+           
+          </div>
+          
+        
+    </form>
+   
+            
+    </div>
+        
+        
+        </div>
+        
+        <br>
+        <div id="hr"></div>
+        
+       </div>
+    </div>
+
+

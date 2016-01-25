@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="BMS">
+
+<head>
+
+  <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!--angular-->
+  <script src="js/scripts/angular.min.js"></script>
+    
+    <!--firebase-->
+    <script src="js/scripts/firebase.js"></script>
+    
+    <!--angularfire-->
+    <script src="js/scripts/angularfire.min.js"></script>
+    
+    <!--jequery-->
+  <script src="js/scripts/jquery.min.js"></script>
+    
+    <!--bootstrapjs-->
+  <script src="js/scripts/bootstrap.min.js"></script>
+    
+    <!--Angular-route-->
+  <script type="text/javascript" src="js/scripts/angular-route.js"></script>
+  
+    <!--Angular-animate-->
+  <script src="js/scripts/angular-animate.js"></script>
+    
+    <!--ui-bootstrap-tpls-->
+  <script src="js/scripts/ui-bootstrap-tpls.js"></script>
+    
+    <!--load module-->
+    <script src="app.js"></script>
+    
+    <!--Shared Services-->
+    <script src="services/SharedService.js"></script>
+    
+    <!--Event Controller-->
+    <script src="js/controller/eventcontroller.js"></script>
+    
+   <!--loading Sport Controller-->
+    <script src="js/controller/SportCtrl.js"></script>
+    
+    <!--Loading TicketBooking controller-->
+    
+     <script src="js/controller/TicketBookingCtrl.js"></script>
+    
+    <!--Ticket summary Controller-->
+    <script src="js/controller/TicketSummary.js"></script>
+    
+    <!-- Payment Confirmation Screen controller-->
+    <script src="js/controller/PaymentConfirnationScreenCtrl.js"></script>
+
+    <!--Login Controller -->
+    <script src="js/controller/loginCtrl.js"></script>
+
+                    <!--CSS-->
+    
+    <!--bootstrap-theme.min.css-->
+  <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+    
+    
+    <!--style-->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body background="images/MobUI_BG.png">
+    
+    <div class="container-flude">
+        <div class="modal-header">
+     
+
+    
+        <div class="row">
+            <div class="col-sm-12">
+<nav class="navbar navbar-default " id="profile">
+ 
+   
+    <div class="navbar-header ">
+         <a class="navbar-brand" ><img src="images/GetGame.png" /> </a>
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+          <span class="glyphicon glyphicon-user"></span>
+      </button>
+        
+
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="#/login">Login</a></li>
+         
+        </ul>
+    </div>
+  
+</nav>
+</div>
+</div>
+</div>     
+    <!-- Display Views-->
+<div ng-view></div>
+        <br>
+    
+</div>
+  </body>
+
+</html>
