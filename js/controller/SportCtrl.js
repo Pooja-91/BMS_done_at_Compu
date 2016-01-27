@@ -1,31 +1,44 @@
-    mainApp.controller('SportCtrl', function($scope, $location, $firebaseArray,SharedService) {
-      var result = [];  
-      //get sport Name & sport id from previous page and events and country//
-      //$scope.sport = sessionStorage.getItem("sport");
-      $scope.s_id = "S101";//Still remain the functionality of sliding so that we have hard coded it;
-      $scope.event = JSON.parse(sessionStorage.getItem("eventArr"));
-      $scope.country = JSON.parse(sessionStorage.getItem("countryArr"));
-      //////////////////////////////////////////////////////////////////////////
-
-      /*get Event which are valid*/
-      for (item = 0; item < $scope.event.length; item++) {
-        if ($scope.s_id === $scope.event[item].sport_id) {
-                      var i=0;
-             while($scope.event[item].country_id != $scope.country[i].country_id)
-                  {
-                      i++;
-                  }
-             
-           var data =  angular.extend({},$scope.event[item],$scope.country[i]);
-            result.push(data);
-        }
+    /* sport Controller */
+ mainApp.controller('SportCtrl', function($scope, $location, $http,MYSQL_URL,$rootScope) {
+     /* bach button url to redirect to home page i.g. event page */
+         $rootScope.back = {url:'#/'};
         
-      }
-        $scope.data = result;
-        
-        $scope.BookNow = function(eventId){
-            sessionStorage.setItem("eventId",eventId);
-            $location.path('/TicketBooking');
+        /* BookNow function gets called from Sport View and redirecting to TicketBooking view */
+            $scope.BookNow = function(event){
+            /* Event Id gets from event controller */
+                sessionStorage.setItem("eventId",event.event_id);
+                $scope.dateformat=$scope.event.eventtime;
+                sessionStorage.setItem("price",event.price);
+                sessionStorage.setItem("match",event.name);
+                sessionStorage.setItem("stadium",event.stadiumname);
+                sessionStorage.setItem("eventTime",event.eventtime);
+                $location.path('/TicketBooking');
             
         }
+            
+        $http.get(MYSQL_URL+"/SingleSport"+"/"+sessionStorage.getItem("sportId"))
+        .then(function(response) {
+           
+        $scope.event=response.data[0];
+            
+           /* showing more events  */
+			var pagesShown = 1;
+		    var pageSize = 3;
+		    
+		    $scope.paginationLimit = function(data) {
+		        return pageSize * pagesShown;
+		    };
+        
+		    $scope.hasMoreItemsToShow = function() {
+		        return pagesShown < ($scope.event.length / pageSize);
+		    };
+        
+		    $scope.showMoreItems = function() {
+		        pagesShown = pagesShown + 1;       
+		    };
+        });
+        
+            
+        
+
         });

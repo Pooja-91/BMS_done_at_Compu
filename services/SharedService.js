@@ -1,36 +1,5 @@
-    mainApp.factory('SharedService', function(FIREBASE_URI,$http) {
-        alert(FIREBASE_URI);
-//        // var bmsSports=[];
-//      var obj = {};
-//
-//    $http.get(FIREBASE_URI+"/sport").success(function(response) {
-//        // you can do some processing here
-//        
-//        console.log(JSON.stringify(response.data));
-//    });    
-//        
-//    return obj;  
-        
-//    var myList = [];
-//
-//   
-//        
-   $http.get(FIREBASE_URI+"/sport")
-    .then(function(response) {
-         
-         console.log(JSON.stringify(response.data));
-   });
-        
-   //  });
-//        var getList = function(){
-//        return myList;
-//    }
-//        
-// return {
-//        
-//        getList: getList
-//    };        
-        //console.log(JSON.stringify(sport));
+//  mainApp.factory('SharedService', function($scope,MYSQL_URL) {
+//        alert("MYSQL_URL");
 //      var ref = new Firebase(FIREBASE_URI);  //get firebase reference
 //      var sportRef = ref.child("sport");  //get sport reference
 //      var eventRef = ref.child("event");  //get event reference
@@ -61,5 +30,12 @@
 //          return $firebaseArray(eventRef);
 //        }
 //      };
-
-});
+//    $http.get(MYSQL_URL+"/sport")
+//    .then(function(response) {
+//         $scope.names = response.data[0];
+//         return $scope.names;
+//         //alert($scope.names);
+//         console.log(JSON.stringify($scope.names));
+//     });
+      
+  //  });

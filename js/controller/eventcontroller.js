@@ -1,33 +1,23 @@
-    mainApp.controller('eventcontroller', function($scope,SharedService,$location) {
-   alert(SharedService);
-//       $scope.datalists=[];
-//    $scope.datalists = SharedService.getEvent(); //store all event 
+    mainApp.controller('eventcontroller', function($scope,$location,$http,MYSQL_URL) {   
+    /* connection to Sport URL */
+    $http.get(MYSQL_URL+"/sport")
+    .then(function(response) {
+           
+         $scope.sport=response.data[0];
+           
+     });
         
-        //show more functionality
-			var pagesShown = 1;
-		    var pageSize = 3;
-		    
-		    $scope.paginationLimit = function(data) {
-		        return pageSize * pagesShown;
-		    };
-        
-		    $scope.hasMoreItemsToShow = function() {
-		        return pagesShown < ($scope.datalists.length / pageSize);
-		    };
-        
-		    $scope.showMoreItems = function() {
-		        pagesShown = pagesShown + 1;       
-		    };
-
-                       
-        /*BookTicket Code Start here*/
+    /* Function gets call from Upcoming Events and redirect to ticket booking page */
 	    $scope.BookTicket=function(eventId){
 		    
 		    sessionStorage.setItem("eventId",eventId);
             $location.path("/TicketBooking");
 		    
 	    }
-      $scope.evevtSelection=function(){
+    /* Function Gets call from Sport and redirecting to sport page*/
+      $scope.evevtSelection=function(sport){
+          
+          sessionStorage.setItem("sportId",sport.sport_id);
           $location.path('/sport');
       }
         

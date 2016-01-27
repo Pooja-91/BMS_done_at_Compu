@@ -1,7 +1,14 @@
 /* BMS app Defined */
-var mainApp = angular.module("BMS", ['ngRoute','firebase']);
-/* connection to firebase link */
-mainApp.constant('FIREBASE_URI','http://localhost:9090/api');
+var mainApp = angular.module("BMS", ['ngRoute']);
+/* connection to MySQL database */
+mainApp.constant('MYSQL_URL','https://greatnode.herokuapp.com/api');
+/* connection to post data */
+mainApp.config(function ($httpProvider) {
+  $httpProvider.defaults.headers.common = {};
+  $httpProvider.defaults.headers.post = {};
+  $httpProvider.defaults.headers.put = {};
+  $httpProvider.defaults.headers.patch = {};
+});
 
 /* Routing of all views and controller to make singal page applicatin */
     mainApp.config(function($routeProvider) {

@@ -55,9 +55,11 @@
     <!-- Payment Confirmation Screen controller-->
     <script src="js/controller/PaymentConfirnationScreenCtrl.js"></script>
 
-    <!--Login Controller -->
+<!--
+    Login Controller 
     <script src="js/controller/loginCtrl.js"></script>
-
+-->
+    
                     <!--CSS-->
     
     <!--bootstrap-theme.min.css-->
@@ -71,36 +73,33 @@
 </head>
 
 <body background="images/MobUI_BG.png">
-    
-    <div class="container-flude">
-        <div class="modal-header">
-     
-
-    
-        <div class="row">
-            <div class="col-sm-12">
-<nav class="navbar navbar-default " id="profile">
- 
-   
-    <div class="navbar-header ">
-         <a class="navbar-brand" ><img src="images/GetGame.png" /> </a>
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
-          <span class="glyphicon glyphicon-user"></span>
-      </button>
+<div class="container-flude">
         
+        
+        
+<!--
+<div class="modal-header">  
+<div class="row">
+<div class="col-sm-12">
+<div class="panel panel-default">
+    <div class="panel-heading" id="toppanel">
+        
+<a class="panel-brand pull-right" ><img src="images/GetGame.png" class="responsive-image" /> </a>
+            
 
+        <a ng-href="{{back.url}}"><button class="back btn btn-default pull-left" ng-hide="{{back.text}}"><span  class="glyphicon glyphicon-chevron-left pull-left" id="buttback"></span></button></a>
+        <div class="clearfix"></div>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar">
-      <ul class="nav navbar-nav navbar-right">
-        <li><a href="#/login">Login</a></li>
-         
-        </ul>
-    </div>
-  
-</nav>
+    
+</div>
+
 </div>
 </div>
+            
 </div>     
+-->
+        
+        
     <!-- Display Views-->
 <div ng-view></div>
         <br>
