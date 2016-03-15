@@ -1,0 +1,19 @@
+#field,label{
+    float:left;
+    font-family:Arial,Helvetica,sans-serif;
+    font-size:small;
+    color: red;
+}
+#confmess{
+    color: green;
+}
+    .error-info{
+        color: red;
+        margin-top: 20px;
+        text-align: center;
+        font-weight: bold;
+      }
+div #price{
+    border: azure;
+
+}

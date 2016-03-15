@@ -1,0 +1,23 @@
+button.btn-block{
+   margin-left: 25%;
+    margin-right: 20%;
+    margin-top: 0.5%;
+    width: 50%;
+    
+}
+
+ #banner{
+     margin-top: -29px;
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-attachment: inherit;
+        width:100%;
+     
+    }
+/*
+img {
+ image-rendering: auto;
+ image-rendering: crisp-edges;
+ image-rendering: pixelated;
+}*/

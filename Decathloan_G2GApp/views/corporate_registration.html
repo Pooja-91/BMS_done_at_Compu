@@ -1,0 +1,2844 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Corporate Registration</title>
+
+    <!-- Accordion styles -->
+    <link rel="stylesheet" href="../css/smk-accordion.css" />
+    <script src="../libs/firebase.js"></script>
+    <script type="text/javascript" src="../libs/min/jquery-1.10.1.min.js"></script>
+    <!--<script type="text/javascript" src="../libs/bootstrap.min.js"></script>-->
+    <script type="text/javascript" src="../libs/min/jquery-migrate-1.2.1.min.js"></script>
+    
+   <!-- <link rel="stylesheet" href="../css/bootstrap.min.css" />-->
+    <link rel="stylesheet" href="../css/datepicker.css">
+    <link rel="stylesheet" href="../css/main/corporate.css">
+    <script src="../libs/bootstrap-datepicker.js"></script>
+
+    <!-- Validation Js-->
+    <script src="../libs/min/jquery.validate.min.js"></script>
+    <script src="../libs/min/additional-methods.min.js"></script>
+    <script src="../js/CorporateFormValidation.js"></script>
+    
+     <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../vendors/bootstrap/fonts/glyphicons-halflings-regular.woff">
+    <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
+
+</head>
+
+<body>
+    <div class="container-flude">
+        <div class="modal-header">
+            <div class="row">
+                <div class="col-sm-12">
+                    <nav class="navbar navbar-default ">
+                        <div class="navbar-header  ">
+                            <a class="navbar-brand" style="align:center;"><img src="../images/Get2theGames.png" style="height:30px;width=20px;align:center;float:left;" /> </a>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container_demo">
+
+        <h2>Corporate Registration</h2>
+        <!-- Accordion begin -->
+        <div class="accordion_example9">
+        <div class="form-group">
+<div class="row">
+            <div class="col-sm-6" > 
+                <form id="companyID" method="post" action="post">
+                <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Company Name">
+                    </form>
+                
+                </div>
+            </div>
+
+            </div>
+
+            <!-- Section 1 -->
+            <div class="accordion_in">
+                <div class="acc_head">Team 1</div>
+                <div class="acc_content nodemohtml">
+                   
+
+                    <!-- Child Accordion 1 begin -->
+                    <div class="accordion_example9">
+                        
+                         <div class="form-group">
+                        <div class="row">
+                        <div class="col-sm-6">    
+                       <form class="form-horizontal" id="radioform">
+                            <h4>Select Distance : </h4>
+                            <div class="radio">
+                              
+                                    <input type="radio" name="distance" id="dist" value="5KM" checked>5 KM<br/>
+                                
+                                    <input type="radio" name="distance" id="dist" value="12.5KM">12.5 KM<br/>
+                        
+                                    <input type="radio" name="distance" id="dist" value="25KM">25 KM
+                                <br/>
+                               
+                            </div>
+                             <label name="radioDist" for="distance" class="error" style="display:none;">Please Select Distance</label>
+                       </form>
+                           </div>
+                    </div>  
+                </div>
+                        
+                        
+
+                        <!-- Section 1 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 1</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form1" action="post" method="post">
+                                            
+                                            <div class="form-group">
+                                                <div class="radio">
+                                                    <label></label>
+                                                    <input type="radio" value="captain" id="captain" name="captain" checked>Captain
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker1" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="Selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Section 2 -->
+                        <div class="accordion_in">
+                            <div class="acc_head"> Participant 2</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form2" action="post" method="post">
+                                            
+                                            <div class="form-group">
+
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker2" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                    
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T - Shirt Size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 3</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form3" action="post" method="post">
+                                            
+                                            <div class="form-group">
+
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker3" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="Selected">Blood Group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 2 -->
+            <div class="accordion_in">
+                <div class="acc_head">Team 2</div>
+                <div class="acc_content nodemohtml">
+                    
+
+
+                    <!-- Child Accordion 1 begin -->
+                    <div class="accordion_example9">
+                         
+ <div class="form-group">
+                        <div class="row">
+                        <div class="col-sm-6">    
+                       <form class="form-horizontal" id="radioform1">
+                            <h4>Select Distance : </h4>
+                            <div class="radio">
+                              
+                                    <input type="radio" name="distance1" id="dist" value="5KM" checked>5 KM<br/>
+                                
+                                    <input type="radio" name="distance1" id="dist" value="12.5KM">12.5 KM<br/>
+                        
+                                    <input type="radio" name="distance1" id="dist" value="25KM">25 KM
+                                <br/>
+                               
+                            </div>
+                             <label name="radioDist" for="distance1" class="error" style="display:none;">Please Select Distance</label>
+                       </form>
+                           </div>
+                    </div>  
+                </div>
+                        <!-- Section 1 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 1</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form4" action="post" method="post">
+                                            
+                                            <div class="form-group">
+                                                <div class="radio">
+                                                    <label></label>
+                                                    <input type="radio" value="captain" id="captain" name="captain" checked>Captain
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker4" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                   
+                                                </div>
+                                                 <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="Selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Section 2 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 2</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form5" action="post" method="post">
+                                            
+                                            <div class="form-group">
+
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker5" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T - Shirt Size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 3</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form6" action="post" method="post">
+                                            
+                                            <div class="form-group">
+
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker6" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                    
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="Selected">Blood Group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 3 -->
+            <div class="accordion_in">
+                <div class="acc_head">Team 3</div>
+                <div class="acc_content nodemohtml">
+
+                    <!-- Child Accordion 1 begin -->
+                    <div class="accordion_example9">
+                        
+                         <div class="form-group">
+                        <div class="row">
+                        <div class="col-sm-6">    
+                       <form class="form-horizontal" id="radioform2">
+                            <h4>Select Distance : </h4>
+                            <div class="radio">
+                              
+                                    <input type="radio" name="distance2" id="dist" value="5KM" checked>5 KM<br/>
+                                
+                                    <input type="radio" name="distance2" id="dist" value="12.5KM">12.5 KM<br/>
+                        
+                                    <input type="radio" name="distance2" id="dist" value="25KM">25 KM
+                                <br/>
+                               
+                            </div>
+                             <label name="radioDist" for="distance2" class="error" style="display:none;">Please Select Distance</label>
+                       </form>
+                           </div>
+                    </div>  
+                </div>
+                        
+                        
+                        
+                        <!-- Section 1 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 1</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form7" action="post" method="post">
+                                            <div class="form-group">
+                                                <div class="radio">
+                                                    <label></label>
+                                                    <input type="radio" value="captain" id="captain" name="captain" checked>Captain
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker7" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                    
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="Selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Section 2 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 2</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form8" action="post" method="post">
+                                            
+                                            <div class="form-group">
+
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker8" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Please Select Date" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                    
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T - Shirt Size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 3</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form9" action="post" method="post">
+                                           
+                                            <div class="form-group">
+
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker9" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                   
+                                                </div>
+                                                 <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="Selected">Blood Group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Section 4 -->
+            <div class="accordion_in">
+                <div class="acc_head">Team 4</div>
+                <div class="acc_content nodemohtml">
+                   
+
+                    <!-- Child Accordion 1 begin -->
+                    <div class="accordion_example9">
+                        
+                         <div class="form-group">
+                        <div class="row">
+                        <div class="col-sm-6">    
+                       <form class="form-horizontal" id="radioform3">
+                            <h4>Select Distance : </h4>
+                            <div class="radio">
+                              
+                                    <input type="radio" name="distance3" id="dist" value="5KM" checked>5 KM<br/>
+                                
+                                    <input type="radio" name="distance3" id="dist" value="12.5KM">12.5 KM<br/>
+                        
+                                    <input type="radio" name="distance3" id="dist" value="25KM">25 KM
+                                <br/>
+                               
+                            </div>
+                             <label name="radioDist" for="distance3" class="error" style="display:none;">Please Select Distance</label>
+                       </form>
+                           </div>
+                    </div>  
+                </div>
+                        
+
+                        <!-- Section 1 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 1</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form10" action="post" method="post">
+                                            
+                                            <div class="form-group">
+                                                <div class="radio">
+                                                    <label></label>
+                                                    <input type="radio" value="captain" id="captain" name="captain" checked>Captain
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker10" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                    
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="Selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Section 2 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 2</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form11" action="post" method="post">
+                                           
+                                            <div class="form-group">
+
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker11" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T - Shirt Size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 3</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form12" action="post" method="post">
+                                           
+                                            <div class="form-group">
+                                                <!-- <label for="Captain">Captain</label>-->
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker12" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="Selected">Blood Group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 5 -->
+            <div class="accordion_in">
+                <div class="acc_head">Team 5</div>
+                <div class="acc_content nodemohtml">
+                    
+                    <!-- Child Accordion 1 begin -->
+                    <div class="accordion_example9">
+                         
+                         <div class="form-group">
+                        <div class="row">
+                        <div class="col-sm-6">    
+                       <form class="form-horizontal" id="radioform4">
+                            <h4>Select Distance : </h4>
+                            <div class="radio">
+                              
+                                    <input type="radio" name="distance4" id="dist" value="5KM" checked>5 KM<br/>
+                                
+                                    <input type="radio" name="distance4" id="dist" value="12.5KM">12.5 KM<br/>
+                        
+                                    <input type="radio" name="distance4" id="dist" value="25KM">25 KM
+                                <br/>
+                               
+                            </div>
+                             <label name="radioDist" for="distance4" class="error" style="display:none;">Please Select Distance</label>
+                       </form>
+                           </div>
+                    </div>  
+                </div>
+                        
+
+                        <!-- Section 1 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 1</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form13" action="post" method="post">
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Company Name">
+                                            </div>
+                                            <div class="form-group">
+                                                <div class="radio">
+                                                    <label></label>
+                                                    <input type="radio" value="captain" id="captain" name="captain" checked>Captain
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker13" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="Selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Section 2 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 2</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form14" action="post" method="post">
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="companyName" name="companyName" placeholder="Company Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker14" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T - Shirt Size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 3</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form15" action="post" method="post">
+                                            
+                                            <div class="form-group">
+
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker15" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="Selected">Blood Group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 6 -->
+            <div class="accordion_in">
+                <div class="acc_head">Team 6</div>
+                <div class="acc_content nodemohtml">
+                   
+                    <!-- Child Accordion 1 begin -->
+                    <div class="accordion_example9">
+                         <div class="form-group">
+                        <div class="row">
+                        <div class="col-sm-6">    
+                       <form class="form-horizontal" id="radioform5">
+                            <h4>Select Distance : </h4>
+                            <div class="radio">
+                              
+                                    <input type="radio" name="distance5" id="dist" value="5KM" checked>5 KM<br/>
+                                
+                                    <input type="radio" name="distance5" id="dist" value="12.5KM">12.5 KM<br/>
+                        
+                                    <input type="radio" name="distance5" id="dist" value="25KM">25 KM
+                                <br/>
+                               
+                            </div>
+                             <label name="radioDist" for="distance5" class="error" style="display:none;">Please Select Distance</label>
+                       </form>
+                           </div>
+                    </div>  
+                </div>
+
+                        <!-- Section 1 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 1</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form16" action="post" method="post">
+                                            
+                                            <div class="form-group">
+                                                <div class="radio">
+                                                    <label></label>
+                                                    <input type="radio" value="captain" id="captain" name="captain" checked>Captain
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker16" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                    <label for="dob" class="error" generated="true"></label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="Selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Section 2 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 2</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form17" action="post" method="post">
+                                            
+                                            <div class="form-group">
+
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker17" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T - Shirt Size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 3</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form18" action="post" method="post">
+                                           
+                                            <div class="form-group">
+
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker18" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                    <label for="dob" class="error" generated="true"></label>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="Selected">Blood Group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 7 -->
+            <div class="accordion_in">
+                <div class="acc_head">Team 7</div>
+                <div class="acc_content nodemohtml">
+                   
+                    <!-- Child Accordion 1 begin -->
+                    <div class="accordion_example9">
+                        
+                         <div class="form-group">
+                        <div class="row">
+                        <div class="col-sm-6">    
+                       <form class="form-horizontal" id="radioform6">
+                            <h4>Select Distance : </h4>
+                            <div class="radio">
+                              
+                                    <input type="radio" name="distance6" id="dist" value="5KM" checked>5 KM<br/>
+                                
+                                    <input type="radio" name="distance6" id="dist" value="12.5KM">12.5 KM<br/>
+                        
+                                    <input type="radio" name="distance6" id="dist" value="25KM">25 KM
+                                <br/>
+                               
+                            </div>
+                             <label name="radioDist" for="distance6" class="error" style="display:none;">Please Select Distance</label>
+                       </form>
+                           </div>
+                    </div>  
+                </div>
+                        
+                        
+                        
+
+                        <!-- Section 1 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 1</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form19" action="post" method="post">
+                                           
+                                            <div class="form-group">
+                                                <div class="radio">
+                                                    <label></label>
+                                                    <input type="radio" value="captain" id="captain" name="captain" checked>Captain
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker19" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="Selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Section 2 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 2</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form20" action="post" method="post">
+                                           
+                                            <div class="form-group">
+
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker20" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T - Shirt Size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 3</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form21" action="post" method="post">
+                                            
+                                            <div class="form-group">
+
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker21" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="Selected">Blood Group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 8 -->
+            <div class="accordion_in">
+                <div class="acc_head">Team 8</div>
+                <div class="acc_content nodemohtml">
+                    
+
+                    <!-- Child Accordion 1 begin -->
+                    <div class="accordion_example9">
+                      
+                         <div class="form-group">
+                        <div class="row">
+                        <div class="col-sm-6">    
+                       <form class="form-horizontal" id="radioform7">
+                            <h4>Select Distance : </h4>
+                            <div class="radio">
+                              
+                                    <input type="radio" name="distance7" id="dist" value="5KM" checked>5 KM<br/>
+                                
+                                    <input type="radio" name="distance7" id="dist" value="12.5KM">12.5 KM<br/>
+                        
+                                    <input type="radio" name="distance7" id="dist" value="25KM">25 KM
+                                <br/>
+                               
+                            </div>
+                             <label name="radioDist" for="distance7" class="error" style="display:none;">Please Select Distance</label>
+                       </form>
+                           </div>
+                    </div>  
+                </div>
+                        
+                        <!-- Section 1 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 1</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form22" action="post" method="post">
+                                            
+                                            <div class="form-group">
+                                                <div class="radio">
+                                                    <label></label>
+                                                    <input type="radio" value="captain" id="captain" name="captain" checked>Captain
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker22" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="Selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Section 2 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 2</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form23" action="post" method="post">
+                                            
+                                            <div class="form-group">
+                                                <!-- <label for="Captain">Captain</label>-->
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker23" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T - Shirt Size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 3</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form24" action="post" method="post">
+                                            <div class="form-group">
+
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker24" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="Selected">Blood Group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 9 -->
+            <div class="accordion_in">
+                <div class="acc_head">Team 9</div>
+                <div class="acc_content nodemohtml">
+                    
+                    <!-- Child Accordion 1 begin -->
+                    <div class="accordion_example9">
+                        
+                         <div class="form-group">
+                        <div class="row">
+                        <div class="col-sm-6">    
+                       <form class="form-horizontal" id="radioform8">
+                            <h4>Select Distance : </h4>
+                            <div class="radio">
+                              
+                                    <input type="radio" name="distance8" id="dist" value="5KM" checked>5 KM<br/>
+                                
+                                    <input type="radio" name="distance8" id="dist" value="12.5KM">12.5 KM<br/>
+                        
+                                    <input type="radio" name="distance8" id="dist" value="25KM">25 KM
+                                <br/>
+                               
+                            </div>
+                             <label name="radioDist" for="distance8" class="error" style="display:none;">Please Select Distance</label>
+                       </form>
+                           </div>
+                    </div>  
+                </div>
+                        
+
+                        <!-- Section 1 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 1</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form25" action="post" method="post">
+                                           
+                                            <div class="form-group">
+                                                <div class="radio">
+                                                    <label></label>
+                                                    <input type="radio" value="captain" id="captain" name="captain" checked>Captain
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker25" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="Selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Section 2 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 2</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form26" action="post" method="post">
+                                            
+                                            <div class="form-group">
+
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker26" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T - Shirt Size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 3</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form27" action="post" method="post">
+                                            
+                                            <div class="form-group">
+
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker27" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="Selected">Blood Group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section 10 -->
+            <div class="accordion_in">
+                <div class="acc_head">Team 10</div>
+                <div class="acc_content nodemohtml">
+                    
+
+                    <!-- Child Accordion 1 begin -->
+                    <div class="accordion_example9">
+                        
+                         <div class="form-group">
+                        <div class="row">
+                        <div class="col-sm-6">    
+                       <form class="form-horizontal" id="radioform9">
+                            <h4>Select Distance : </h4>
+                            <div class="radio">
+                              
+                                    <input type="radio" name="distance9" id="dist" value="5KM" checked>5 KM<br/>
+                                
+                                    <input type="radio" name="distance9" id="dist" value="12.5KM">12.5 KM<br/>
+                        
+                                    <input type="radio" name="distance9" id="dist" value="25KM">25 KM
+                                <br/>
+                               
+                            </div>
+                             <label name="radioDist" for="distance9" class="error" style="display:none;">Please Select Distance</label>
+                       </form>
+                           </div>
+                    </div>  
+                </div> 
+                        
+                        <!-- Section 1 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 1</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form28" action="post" method="post">
+                                            
+                                            <div class="form-group">
+                                                <div class="radio">
+                                                    <label></label>
+                                                    <input type="radio" value="captain" id="captain" name="captain" checked>Captain
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker28" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="Selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Section 2 -->
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 2</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form29" action="post" method="post">
+                                            
+                                            <div class="form-group">
+
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker29" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T - Shirt Size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="selected">Blood group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion_in">
+                            <div class="acc_head">Participant 3</div>
+                            <div class="acc_content">
+                                <div class="row">
+                                    <div class="col-sm-6">
+                                        <form class="form-horizontal" id="form30" action="post" method="post">
+                                            
+                                            <div class="form-group">
+
+                                                <div class="radio">
+
+                                                    <input type="radio" value="participant" id="captain" name="captain" checked>Participant
+
+
+                                                </div>
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <div id="datepicker30" class="input-group date" data-date-format="dd-mm-yyyy">
+                                                    <input class="form-control" name="dob" type="text" placeholder="Select Date Of Birth" readonly />
+                                                    <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+                                                </div>
+                                                <label for="dob" class="error" generated="true"></label>
+                                            </div>
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="email" name="email" placeholder="Email Id">
+                                            </div>
+
+                                            <div class="form-group">
+
+                                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+                                            </div>
+                                            <div class="form-group">
+
+                                                <select class="form-control" name="shirt" id="shirt" name="shirt">
+                                                    <option value="" selected="selected">Select T_shirt_size</option>
+                                                    <option>XS</option>
+                                                    <option>S</option>
+                                                    <option>M</option>
+                                                    <option>L</option>
+                                                    <option>XL</option>
+                                                    <option>XXL</option>
+                                                </select>
+
+                                            </div>
+
+                                            <div class="form-group">
+                                                <select class="form-control" name="blood" id="blood" name="blood">
+                                                    <option value="" selected="Selected">Blood Group</option>
+                                                    <option>A+</option>
+                                                    <option>A-</option>
+                                                    <option>B+</option>
+                                                    <option>B-</option>
+                                                    <option>AB+</option>
+                                                    <option>AB-</option>
+                                                    <option>O+</option>
+                                                    <option>O-</option>
+
+
+                                                </select>
+
+                                            </div>
+
+
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+    </div>
+
+    </div>
+    <!-- Accordion end -->
+
+
+
+    <div class="form-group">
+
+
+        <input id="btn" class="btn btn-primary" type="button" value="Next" />
+<br/>
+        <label  id="memberLabel"  style="display:none; color:red">(Please enter details for minimum two members to complete the registration)</label>
+       <!-- <button type="button" id="NextBtn" class="btn btn-primary" onclick="SavePlayer();" disabled>Next</button>-->
+    </div>
+    <br>
+
+    </div>
+
+
+    <script type="text/javascript" src="../js/smk-accordion.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".accordion_example9").smk_Accordion();
+
+        });
+    </script>
+</body>
+
+</html>

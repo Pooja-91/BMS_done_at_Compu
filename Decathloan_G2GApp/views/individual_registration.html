@@ -1,0 +1,175 @@
+<html>
+
+<head>
+    <title>Individual Registration</title>
+
+
+
+
+    <script src="../libs/jquery.min.js"></script>
+
+    <script src="../vendors/bootstrap/js/bootstrap.min.js"></script>
+    <script src="../libs/firebase.js"></script>
+
+    <link rel="stylesheet" href="../css/main/individual.css">
+    
+    <!-- Validation Js-->
+    <script src="../libs/min/jquery.validate.min.js"></script>
+    <script src="../js/IndividualFormValidation.js"></script>
+    <script src="../libs/min/additional-methods.min.js"></script>
+
+    <!--Date picker-->
+    <script src="../libs/bootstrap-datepicker.js"></script>
+    <link href="../css/datepicker.css" rel="stylesheet" type="text/css" />
+
+    <link rel="stylesheet" href="../vendors/bootstrap/fonts/glyphicons-halflings-regular.woff">
+    <link rel="stylesheet" href="../vendors/bootstrap/css/bootstrap.min.css">
+
+
+</head>
+
+<body>
+
+
+    <div class="panel-group">
+
+        <div class="panel-default">
+
+            <div class="panel-body">
+                <form class="form-horizontal" action="" method="post" id="form1">
+                    <div class="row">
+                        <div class="col-sm-12">
+                            <nav class="navbar navbar-default ">
+                                <div class="navbar-header  ">
+                                    <a class="navbar-brand" style="align:center;"><img src="../images/Get2theGames.png" style="height:30px;width=20px;align:center;float:left;" /> </a>
+                                </div>
+                            </nav>
+                        </div>
+                    </div>
+
+                    <h2>
+
+        Individual Registration
+
+      </h2>
+                    <div class="col-xs-12 col-lg-6 col-md-6 col-sm-12">
+                        <div class="form-group">
+                        <div class="row">
+                        <div class="col-sm-6">
+
+                            <h4>Select Distance : </h4>
+                            <div class="radio">
+
+                                    <input type="radio" name="distance" id="dist" value="5KM">5 KM<br/>
+
+                                    <input type="radio" name="distance" id="dist" value="12.5KM">12.5 KM<br/>
+
+                                    <input type="radio" name="distance" id="dist" value="25KM">25 KM
+                                <br/>
+
+                            </div>
+                             <label name="radioDist" for="distance" class="error" style="display:none;">Please Select Distance</label>
+                        </div>
+                        </div>
+                        </div>
+
+                        <!--<div class="col-xs-12 col-lg-6 col-md-6 col-sm-12">-->
+                            <div class="form-group">
+                                <div class="radio">
+                                    <label></label>
+                                    <input type="radio" value="captain" id="captain" name="captain" checked>Captain
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+
+                                <input type="text" class="form-control" id="Fname" name="Fname" placeholder="First Name">
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <input type="text" class="form-control" id="Lname" name="Lname" placeholder="Last Name">
+
+                            </div>
+                            <div class="form-group">
+                                <div class="input-group date" data-date-format="dd-mm-yyyy">
+
+                                    <input class="form-control datepicker" name="dob" id="dob" type="text" placeholder="Select Date Of Birth" readonly/>
+
+                                    <span class="input-group-addon datepicker" id="calender"><i class="glyphicon glyphicon-calendar"></i></span>
+
+                                </div>
+                                <label for="dob" class="error" generated="true"></label>
+<!--
+<label name="dob" for="dob" class="error"  id="dob" style="display:block;> </label>
+-->
+
+                            </div>
+
+
+                            <div class="form-group">
+
+                                <input type="text" class="form-control" name="email" placeholder="Email Id">
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <input type="text" class="form-control" id="contactNo" name="contactNo" placeholder="Contact Number">
+
+                            </div>
+                            <div class="form-group">
+
+                                <select class="form-control" name="shirt">
+                                    <option value="" selected="selected">T - Shirt Size</option>
+                                    <option>XS</option>
+                                    <option>S</option>
+                                    <option>M</option>
+                                    <option>L</option>
+                                    <option>XL</option>
+                                    <option>XXL</option>
+                                </select>
+
+
+                            </div>
+
+                            <div class="form-group">
+
+                                <select class="form-control" name="blood">
+                                    <option value="" selected="selected">Blood group</option>
+                                    <option>A+</option>
+                                    <option>A-</option>
+                                    <option>B+</option>
+                                    <option>B-</option>
+                                    <option>AB+</option>
+                                    <option>AB-</option>
+                                    <option>O+</option>
+                                    <option>O-</option>
+
+
+                                </select>
+
+                            </div>
+                            <div class="form-group">
+
+                                <input id="btn" class="btn btn-primary" type="button" value="Next" />
+
+                                <!--<button type="button" id="NextBtn" class="btn btn-primary" onclick="playerOneFun(this.form)" disabled>Next</button>-->
+                            </div>
+
+
+                        <!--</div>
+-->
+                </form>
+
+                </div>
+            </div>
+        </div>
+
+
+
+
+</body>
+
+</html>
