@@ -3,6 +3,8 @@
 /*Validation Logic for Individual and  Team Registeration*/
 var refIndividual = new Firebase("https://get2mygames.firebaseio.com/Individual");
 
+var Servertime=Firebase.ServerValue.TIMESTAMP;
+
 $(function(){
     $('#datepicker').datepicker({
         format: 'dd/mm/yyyy',
@@ -12,44 +14,44 @@ $(function(){
 });
 
 $(document).ready(function () {
-    
+
    $(function(){
     $(".datepicker").datepicker({
         format: 'dd/mm/yyyy',
         endDate: '+0d',
         autoclose: true
     });
-}); 
-    
+});
+
   // Get created date from Firebase servers
 var createdDate = new Firebase('https://get2mygames.firebaseio.com');
 
-    
+
     /* calculate date of birth from user entered date */
-    
+
  jQuery.validator.addMethod("minAge", function(value, element, min) {
     var today = new Date();
          var from = value.split("/");
-    
+
         var birthDate = new Date(from[1]+ '/' + from[0] + '/' +from[2]);
-       
-        
+
+
     var age = today.getFullYear() - birthDate.getFullYear();
  //alert(max);
-       
+
     if (age >= min) {
         return true;
     }
- 
+
     var m = today.getMonth() - birthDate.getMonth();
- 
+
     if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
         age--;
     }
 
 }, "You are not old enough!");
-    
-    
+
+
     $("#form1").validate({
         rules: {
             distance: {
@@ -84,7 +86,7 @@ var createdDate = new Firebase('https://get2mygames.firebaseio.com');
             // agree: "required"
         },
         messages: {
-                      
+
             Fname: "Please Enter Your First Name",
             Lname: "Please Enter Your Last Name",
             dob: {
@@ -105,16 +107,17 @@ var createdDate = new Firebase('https://get2mygames.firebaseio.com');
         if ($("#form1").valid() === true) {
 
            savePlayer();
-    
+
         }
 
 
     });
-    
-    
+
+
      function savePlayer(){
                var form = document.getElementById("form1");
     var Distance = document.querySelector('input[name = "distance"]:checked').value;
+
     var Role = form.captain.value;
     var FirstName = form.Fname.value;
     var LastName = form.Lname.value;
@@ -124,17 +127,9 @@ var createdDate = new Firebase('https://get2mygames.firebaseio.com');
     var T_shirt_size = form.shirt.value;
     var Blood_group = form.blood.value;
     /* Registration ID */
-    /*var a = Math.floor(100000 + Math.random() * 900000)
-    a = a.toString().substring(0, 4);
-    var regiid = 'DEC_' + a;*/
-    
-    var c = 1;
-    var d = new Date(),
-        m = d.getMilliseconds() + "",
-        u = ++d + m + (++c === 10000 ? (c = 1) : c);
-      var regiid='DEC_' + u;   
-   
-    
+
+         var   regiid="DEC_"+("0000" + (Math.random()*Math.pow(36,4) << 0)).slice(-4);
+
     refIndividual.push({
         Participant: {
             "Registration_Id": regiid,
@@ -146,30 +141,35 @@ var createdDate = new Firebase('https://get2mygames.firebaseio.com');
             "Email_id": Email_Id,
             "Contact_no": Contact_No,
             "T_shirt_size": T_shirt_size,
-            "Blood_group": Blood_group
+            "Blood_group": Blood_group,
+            "DateTime":Servertime
         }
 
 
     });
 /* reset form when user cames back from next page */
     $("#form1")[0].reset();
-         
-        //  price in 7.5% more
+
+        //  price in 2.5% more
          var indPrice=500+Math.round(((2.5/100) *500));
-        
-        
-        
-        
+
+        //console.log(indPrice);
+
+
     //redirecting to payment page
      sessionStorage.setItem('type',"Individual");
      sessionStorage.setItem('amt',indPrice);
-        
-   
+         sessionStorage.setItem('RegistID',regiid);
+
+
+
+
+
        //  document.cookie="indRgi1="+indPrice;
          document.cookie="indRgi1="+regiid;
-        
-   document.location.href = 'payment.php'; 
-         
+         document.cookie="dist="+Distance;
+         document.location.href = 'payment.php';
+
 
             }
 });

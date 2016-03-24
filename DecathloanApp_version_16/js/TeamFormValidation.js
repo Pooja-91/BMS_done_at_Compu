@@ -1,4 +1,5 @@
 var refTeam = new Firebase("https://get2mygames.firebaseio.com/Team");
+var Servertime=Firebase.ServerValue.TIMESTAMP;
 
 $(function(){
     $("#datepicker1,#datepicker2,#datepicker3").datepicker({
@@ -264,17 +265,14 @@ $(document).ready(function () {
 
 /* Random Registration ID Generats */
     
-        var c = 1;
-        var d = new Date(),
-        m = d.getMilliseconds() + "",
-        u = ++d + m + (++c === 10000 ? (c = 1) : c);
-      var regid='DEC_' + u;   
-   
+     
+         var   regid="DEC_"+("0000" + (Math.random()*Math.pow(36,4) << 0)).slice(-4);
 /* registration ID Ends here*/
 
     var Participant = {
         "Participant": {
             "Registration_Id": regid,
+            "DateTime":Servertime,
             "Participant1": {
                 "Role": Role,
                 "Distance": Distance,
@@ -328,9 +326,10 @@ $(document).ready(function () {
     //Redirecting to payment page
                         sessionStorage.setItem('type',"Team");
                          sessionStorage.setItem('amt',teamPrice);
-        
+        sessionStorage.setItem('RegistID',regid);
     
     document.cookie="indRgi1="+regid;
+    document.cookie="dist="+Distance;
     document.location.href = 'payment.php';
 
 

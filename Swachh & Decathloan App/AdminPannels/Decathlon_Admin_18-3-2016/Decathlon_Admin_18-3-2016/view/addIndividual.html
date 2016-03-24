@@ -1,0 +1,152 @@
+<nav class="navbar navbar-inverse">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">Decathlon Admin</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Individual <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#/viewIndividual">View Individual Participants</a></li>
+                        <li><a href="#/addIndividual">Add Individual Participants</a></li>
+                        <li><a href="#/editIndividual">Update Individual(Reedemed) Participants</a></li>
+
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Team<span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#/viewTeam">View Team Participants</a></li>
+                        <li><a href="#/addTeam">Add Team Participants</a></li>
+                        <li><a href="#/editIndividual">Update Team(Reedemed) Participants</a></li>
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" data-target="#">Corporate <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#/viewCorporate">View Corporate Participants</a></li>
+                        <li><a href="#/addCorporate">Add Corporate Participants</a></li>
+                        <li><a href="#/editIndividual">Update Corporate(Reedemed) Participants</a></li>
+
+                    </ul>
+                </li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" data-target="#">View Log <span class="caret"></span></a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#/viewEmaillog">View Email Log</a></li>
+                        <li><a href="#/viewCustomer">View Billing Person Log</a></li>
+                        <li><a href="#/viewCustomerTransaction">View Customer Transaction Log</a></li>
+                       <li><a href="#/tracking">Track Registration Details</a></li> 
+                    </ul>
+                </li>
+
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><i class="fa fa-user"></i>Welcome</a></li>
+                <li><a href="#/logout"><i class="fa fa-sign-out"></i> Log Out</a></li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+<div onload="myreg()">
+    <h1>Add Individual</h1>
+    <form id="form1">
+    <table class="table">
+        <th>Participants</th>
+        <tr>
+
+            <th>Role</th>
+            <th>Distance</th>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Date Of Birth</th>
+            <th>Email Id</th>
+            <th>Contact Number</th>
+            <th>T-Shirt-Size</th>
+            <th>Blood Group</th>
+            <th></th>
+            <th>Add Individual</th>
+        </tr>
+        <tr>
+            <td colspan="9">
+                <label style="color:red">Participant</label>
+            </td>
+        </tr>
+        <tr class="active" data-ng-repeat="data in choices">
+
+            <td>
+               <select name="Role" ng-model="indData.Participant.Role" placeholder="Select Your Role">
+      <option value="Captain">Captain</option>
+    </select>
+<!--                <input type="" ng-model="indData.Participant.singleSelect">-->
+            </td>
+            <td>
+                <select name="Distance" ng-model="indData.Participant.Distance" placeholder="Select Your Distance">
+                <option value="5KM">5KM</option>
+                <option value="12.5KM">12.5KM</option>
+                <option value="25KM">25KM</option>                
+                 </select>
+<!--                <input type="text" ng-model="indData.Participant.Distance">-->
+            </td>
+            <td>
+                <input type="text" placeholder="Enter Your First Name" ng-model="indData.Participant.FName">
+            </td>
+            <td>
+                <input type="text" placeholder="Enter Your Last Name" ng-model="indData.Participant.LName">
+            </td>
+            <td>
+                <input type="text" placeholder="DD/MM/YYYY" ng-model="indData.Participant.Date_of_birth">
+            </td>
+            <td>
+                <input type="text" placeholder="Enter Your Email_Id" ng-model="indData.Participant.Email_id" >
+            </td>
+            <td>
+                <input type="text" placeholder="Enter Your Contact Number" ng-model="indData.Participant.Contact_no">
+            </td>
+            <td>
+                <select name="T_shirt_size" placeholder="Select Ypur T_shirt_size" ng-model="indData.Participant.T_shirt_size">
+                <option value="XS">XS</option>
+                <option value="S">S</option>
+                <option value="M">M</option>  
+                <option value="L">L</option>
+                <option value="XL">XL</option>
+                <option value="XXL">XXL</option>       
+                 </select>
+<!--                <input type="text" ng-model="indData.Participant.T_shirt_size">-->
+            </td>
+            <td>
+                <select name="Blood_group" placeholder="Select Your Blood Group" ng-model="indData.Participant.Blood_group">
+                <option value="A+ve">A+ve</option>
+                <option value="A-ve">A-ve</option>
+                <option value="B+ve">B+ve</option>  
+                <option value="B-ve">B-ve</option>
+                <option value="AB+ve">AB+ve</option>
+                <option value="AB-ve">AB-ve</option>
+                <option value="O+ve">O+ve</option>
+                <option value="O-ve">O-ve</option>
+                 </select>
+<!--                <input type="text" ng-model="indData.Participant.Blood_group">-->
+            </td>
+            <td>
+                <input type="hidden" ng-model="indData.Participant.Servertime" ng-init="indData.Participant.DateTime =DateTime;">
+            </td>
+            <td>
+                <input type="hidden" ng-model="indData.Participant.regid" ng-init="indData.Participant.Registration_Id = Registration_Id;">
+                <button class="btn btn-primary" ng-click="individual.$add(indData)">Click_to_Add</button>
+            </td>
+            <td>
+                <button class="remove btn btn-primary" ng-show="$last" ng-click="removeChoice()">Cancel</button>
+            </td>
+        </tr>
+    </table>
+        </form>
+    
+    <button class="addfields btn btn-primary" ng-click="addNewChoice()">Add fields</button>
+</div>

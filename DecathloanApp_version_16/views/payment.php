@@ -1,21 +1,21 @@
 <?php
 error_reporting(0);
-        if(!strstr($_SERVER['HTTP_REFERER'],"individual_registration.html") 
+        if(!strstr($_SERVER['HTTP_REFERER'],"individual_registration.html")
            && !strstr($_SERVER['HTTP_REFERER'],"team_registration.html")
            && !strstr($_SERVER['HTTP_REFERER'],"corporate_registration.html")
-          && !strstr($_SERVER['HTTP_REFERER'],"payment.php") 
+          && !strstr($_SERVER['HTTP_REFERER'],"payment.php")
            && !strstr($_SERVER['HTTP_REFERER'],"newResponse")
           )
          {
-            
+
            // echo $_SERVER['HTTP_REFERER'];
                // redirect to home page.
                    header("Location: ../index.html");
-            
+
             die();
            };
-            
-    
+
+
     ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -81,7 +81,7 @@ function payment_success($trans_id, $productinfo, $amount, $mailSentFalg) {
                 </label>
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-sm-12">
                 <label id="confmess">Registration ID :
@@ -89,7 +89,14 @@ function payment_success($trans_id, $productinfo, $amount, $mailSentFalg) {
                 </label>
             </div>
         </div>
-              
+        <div class="row">
+            <div class="col-sm-12">
+                <label id="confmess">Confirmation ID :
+                    <?php echo $_COOKIE['ConfirmationID']; ?>
+                </label>
+            </div>
+        </div>
+
         <div class="row">
             <div class="col-sm-12">
                 <label id="confmess">Transaction ID :
@@ -97,7 +104,7 @@ function payment_success($trans_id, $productinfo, $amount, $mailSentFalg) {
                 </label>
             </div>
         </div>
-        
+
          <div class="row">
             <div class="col-sm-12">
                 <label id="confmess">PayU ID :
@@ -105,19 +112,19 @@ function payment_success($trans_id, $productinfo, $amount, $mailSentFalg) {
                 </label>
             </div>
         </div>
-        
+
         <div class="row">
             <div class="col-sm-12">
                 <label id="confmess">Registration Fee  : Rs.
                     <?php echo ($amount-round($amount-$amount/1.025)) ?>
                 </label>
-                
+
             </div>
         </div>
         <div class="row">
             <div class="col-sm-12">
                 <label id="confmess">Internet Handling Charges  : Rs.
-                    
+
                     <?php echo round($amount-$amount/1.025) ?>
                 </label>
             </div>
@@ -130,8 +137,8 @@ function payment_success($trans_id, $productinfo, $amount, $mailSentFalg) {
                 </label>
                 <br>
                  <span name='amount' id="price">Including(+2.5% Tax)</span>
-                
-                
+
+
             </div>
         </div>
         <div class="row">
@@ -141,11 +148,11 @@ function payment_success($trans_id, $productinfo, $amount, $mailSentFalg) {
         </div>
         <script>
             //save data to db  Customer transaction details
-            paymentSuccess('<?php echo $productinfo; ?>', '<?php echo $amount; ?>', '<?php echo $trans_id; ?>',"<?php echo $_POST['mihpayid']?>");
+            paymentSuccess('<?php echo $productinfo; ?>', '<?php echo $amount; ?>', '<?php echo $trans_id; ?>',"<?php echo $_POST['mihpayid']?>","<?php echo $_COOKIE['indRgi1']?>","<?php echo $_POST['status']?>");
         </script>
         <script>
             //save data to db  Customer transaction details
-            emailSend("<?php echo $_POST['email']?>","tickets@get2thegames.com","Get2TheGames - ASTHA Decathlon Walkathon 2016 Registration","<?php echo $_POST['status']?>","<?php echo $_POST['productinfo']?>","<?php echo date('Y-m-d')?>","<?php echo $_POST['txnid']?>","<?php echo $_POST['mihpayid']?>","<?php echo $_POST['amount']?>" "<?php echo $_COOKIE['indRgi1']?>");
+            emailSend("<?php echo $_POST['email']?>","tickets@get2thegames.com","Get2TheGames - ASTHA Decathlon Walkathon 2016 Registration","<?php echo $_POST['status']?>","<?php echo $_POST['productinfo']?>","<?php echo date('Y-m-d')?>","<?php echo $_POST['txnid']?>","<?php echo $_POST['mihpayid']?>","<?php echo $_POST['amount']?>","<?php echo $_COOKIE['indRgi1']?>");
 
         </script>
         <?php
@@ -193,7 +200,7 @@ function payment_form()
 
                         <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
                             <form action="" method="post" id="form" novalidate>
-                                
+
                                 <div class="form-group">
                                     <input type="text" class="form-control" id="fullName" placeholder="Full Name" name="FirstName">
                                     <label id="fname" style="color:red;"></label>
@@ -218,8 +225,8 @@ function payment_form()
                                     <div class="col-xs-12 col-sm-12 col-lg-6 col-md-6">
                                     <strong>Your Amount is:
              <i class="fa fa-inr"></i>
-                                        
-            
+
+
              <input style="border: azure; width:50px" name='amount' id="price" type='text' value="" readonly><br>
                                         <span name='amount' id="price">Including(+2.5% Tax)</span>
 
@@ -228,7 +235,7 @@ function payment_form()
                                     </div>
                                 </div>
 
-                                
+
 
                         </div>
 
@@ -242,7 +249,7 @@ function payment_form()
                                         <button class="btn btn-primary" id="btn" type="button">MAKE PAYMENT</button>
                                         <button onclick="document.location.href='../index.html';" class="btn btn-primary">Cancel</button>
 
-   
+
                                     </div>
                                 </div>
                                 </div>
@@ -260,7 +267,7 @@ function payment_form()
                                         <button class="btn btn-primary" id="btn" type="button">MAKE PAYMENT</button>
                                         <button onclick="document.location.href='../index.html';" class="btn btn-primary">Cancel</button>
 
-   
+
                                     </div>
                                 </div>
                                 </div>
@@ -317,13 +324,15 @@ if($_POST && !empty($_POST) && isset($_POST['status']) && isset($_POST['unmapped
            $internateCharges= round($_POST['amount']-$_POST['amount']/1.025);
            $userBody .= '<tr><td><b>Internet Handling Charges Rs.</b></td><td> : </td><td>'. $internateCharges.'</td></tr>';
 
-          
-            
-           
+
+
+
             $userBody .= '<tr><td><b>Amount Paid Rs.</b></td><td> : </td><td>'.$_POST['amount'].' including (+2.5% Tax)'.'</td></tr>';
             $userBody .= '<tr><td><b>Transaction Status</b></td><td> : </td><td>'.$_POST['status'].'</br></td></tr>';
-          
+
            $userBody .= '<tr><td><b>Registration ID</b></td><td> : </td><td>'.$_COOKIE['indRgi1'].'</br></td></tr>';
+          $userBody .= '<tr><td><b>Confirmation ID</b></td><td> : </td><td>'.$_COOKIE['ConfirmationID'].'</br></td></tr>';
+
 
 
             $userBody .= '<tr><td colspna="3"><b><u>Registrar Details:</u></b></br></td></tr>';
@@ -331,6 +340,167 @@ if($_POST && !empty($_POST) && isset($_POST['status']) && isset($_POST['unmapped
             $userBody .= '<tr><td><b>Email ID</b></td><td> : </td><td>'.$_POST['email'].'</td></tr>';
             $userBody .= '<tr><td><b>Contact Number</b></td><td> : </td><td>'.$_POST['phone'].'</td></tr>';
             $userBody .= '</tbody></table>';
+          //Confirmation Voucher
+          $userBody .='<table style="width:100%;">
+
+        <tr>
+
+            <td>
+
+                <label>Dear '.$_POST['firstname'].',</label>
+                <br>
+                <br> Your registration is confirmed.
+                <br> Please treat this voucher as a confirmation and your kit
+                <br> can be redeemed from Decathlon, Sarjapur on event day.
+                <br>
+                <br>
+                <address>
+
+From,<br>
+Sun Sports Private Limited(India),<br>
+Bengaluru - 560061.
+<br>
+Company VAT TIN: 29121138047/24.05.2013<br>
+Company PAN AASC58067JS<br>
+Service Tax No: AASCS8067JSSD001
+                                  <br>
+                                  Service Tax Category: Business Auxiliary Service/ Event Management
+</address>
+            </td>
+            <td border="1">
+                <span>CONFIRMATION VOUCHER</span>
+
+                <br>
+                <br>
+                <label>Payment Information</label>
+                <br>
+
+                <address>
+Payment Gateway: PayU<br>
+Trans ID:'.$_POST['txnid'].'<br>
+Order Placed in: INR<br>
+
+</address>
+
+
+            </td>
+
+
+        </tr>
+
+
+    </table>';
+          $userBody .='<div>
+        <h4 style="text-align:center">Confirmation ID:'.$_COOKIE['ConfirmationID'].'</h4></div>';
+
+        $userBody .='<div><h2 style="text-align:center">DECATHLON WALKATHON 2016</h2>
+        <h5 style="text-align:center">Spreding SportAbilities<br>
+    2nd April 2016 5:00AM Onwards<br>
+        Decathloan, Sarjapur
+    </h5>
+    </div>';
+
+        $userBody .='<table border="1" style="text-align:center;background-color: rgb(209, 209, 188); width:100%">
+            <tbody>';
+
+               $userBody .='<tr>
+                    <th rowspan="2">Format</th>
+                    <th colspan="2">Participation Details</th>
+                    <th rowspan="2">Registeration Fee</th>
+                </tr>';
+
+          $userBody .='<tr style="vertical-align: bottom">
+                    <th>Type</th>
+                    <th>No. of Participants</th>
+                </tr>';
+          if($_POST['amount'] == 513)
+          {
+          $userBody .='<tr>
+                    <td>'.$_COOKIE['dist'].' </td>
+                    <td>Individual</td>
+                    <td>1</td>
+                    <td>500</td>
+                </tr>';
+          }
+          elseif($_POST['amount'] == 1025){
+$userBody .='<tr>
+                    <td>'.$_COOKIE['dist'].' </td>
+                    <td>Team</td>
+                    <td>3</td>
+                    <td>1000</td>
+                </tr>';
+          }
+          elseif($_POST['amount'] == 10250){
+                $userBody .='<tr>';
+                    $userBody .='<td>';
+                        if($_COOKIE['dist1'] != "")
+                        {
+                            $userBody .='<label>Team1: '.$_COOKIE['dist1'].'</label><br>';
+                        }
+                        if($_COOKIE['dist2'] != "")
+                        {
+                            $userBody .='<label>Team2: '.$_COOKIE['dist2'].'</label><br>';
+                        }
+                        if($_COOKIE['dist3'] != "")
+                        {
+                            $userBody .='<label>Team3: '.$_COOKIE['dist3'].'</label><br>';
+                        }
+                        if($_COOKIE['dist4'] != "")
+                        {
+                            $userBody .='<label>Team4: '.$_COOKIE['dist4'].'</label><br>';
+                        }
+                        if($_COOKIE['dist5'] != "")
+                        {
+                            $userBody .='<label>Team5: '.$_COOKIE['dist5'].'</label><br>';
+                        }
+                        if($_COOKIE['dist6'] != "")
+                        {
+                            $userBody .='<label>Team6: '.$_COOKIE['dist6'].'</label><br>';
+                        }
+                        if($_COOKIE['dist7'] != "")
+                        {
+                            $userBody .='<label>Team7: '.$_COOKIE['dist7'].'</label><br>';
+                        }
+                        if($_COOKIE['dist8'] != "")
+                        {
+                            $userBody .='<label>Team8: '.$_COOKIE['dist8'].'</label><br>';
+                        }
+                        if($_COOKIE['dist9'] != "")
+                        {
+                            $userBody .='<label>Team9: '.$_COOKIE['dist9'].'</label><br>';
+                        }
+                        if($_COOKIE['dist10'] != "")
+                        {
+                            $userBody .='<label>Team10: '.$_COOKIE['dist10'].'</label>';
+                        }
+                    $userBody .='</td>';
+                    $userBody .='<td>Corpotrate</td>';
+                    $userBody .='<td>30</td>
+                    <td>10000</td>';
+                $userBody .='</tr>';
+          }
+          $userBody .='<tr>
+                    <td colspan="4" style="text-align:center;">Total(Including 2.5% Internet Charges)</td></tr>';
+
+          $userBody .='</tbody></table>';
+
+        $userBody .='<table>
+            <tr>
+                <td>Note: Flag off at 6.30 am, Age: 15 years and above
+                    <br> If you have any queries concerning the registration, contact +91 8040926994 support@get2thegames.com.
+                </td>
+            </tr>
+            <hr>
+            <tr>
+                <td> Thanks You for being part of Force to Spread SportAbilities by contributing your money, time and efforts to support the future of Para-Sports in India
+
+                </td>
+            </tr>
+
+        </table>';
+          //Confirmation Voucher
+
+
             $userBody .= '<div><strong>Thanks and Regards</strong><br />
                             Get2TheGames<br />
                             Phone: +91-8040926994<br />
@@ -348,7 +518,7 @@ if($_POST && !empty($_POST) && isset($_POST['status']) && isset($_POST['unmapped
                 //echo 'Message has been sent';
                 $mailSentFalg = 1;
             }
-          
+
             payment_success($_POST['txnid'], $_POST['productinfo'], $_POST['amount'], $mailSentFalg);
 
             //Mail For Admin
@@ -379,18 +549,20 @@ if($_POST && !empty($_POST) && isset($_POST['status']) && isset($_POST['unmapped
             $adminBody .= '<tr><td><b>PayU ID</b></td><td> : </td><td>'.$_POST['mihpayid'].'</td></tr>';
             $adminBody .= '<tr><td><b>Event Name</b></td><td> : </td><td>'.$_POST['productinfo'].'</td></tr>';
 
-          
-         
+
+
           $regFee= ($_POST['amount']-round($_POST['amount']-$_POST['amount']/1.025)) ;
-          
-           
+
+
           $adminBody .= '<tr><td><b>Registration Fee Rs.</b></td><td> : </td><td>'.$regFee.'</td></tr>';
           $internateCharges= round($_POST['amount']-$_POST['amount']/1.025);
           $adminBody .= '<tr><td><b>Internet Handling Charges Rs.</b></td><td> : </td><td>'.$internateCharges.'</td></tr>';
             $adminBody .= '<tr><td><b>Amount Paid</b></td><td> : </td><td>'.$_POST['amount'].' including (+2.5% Tax)'.'</td></tr>';
             $adminBody .= '<tr><td><b>Transaction Status</b></td><td> : </td><td>'.$_POST['status'].'</br></td></tr>';
-          
+
           $adminBody .= '<tr><td><b>Registration ID</b></td><td> : </td><td>'.$_COOKIE['indRgi1'].'</br></td></tr>';
+          $adminBody .= '<tr><td><b>Registration ID</b></td><td> : </td><td>'.$_COOKIE['ConfirmationID'].'</br></td></tr>';
+
 
             $adminBody .= '<tr><td colspna="3"><b><u>Registrar Details:</u></b></br></td></tr>';
             $adminBody .= '<tr><td><b>Username</b></td><td> : </td><td>'.$_POST['firstname'].'</td></tr>';
@@ -398,7 +570,7 @@ if($_POST && !empty($_POST) && isset($_POST['status']) && isset($_POST['unmapped
             $adminBody .= '<tr><td><b>Contact Number</b></td><td> : </td><td>'.$_POST['phone'].'</td></tr>';
             $adminBody .= '</tbody></table>';
             $adminBody .= '<h4>Thanks</h4>';
-          
+
             $mail->Body = $adminBody;
             //$mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 

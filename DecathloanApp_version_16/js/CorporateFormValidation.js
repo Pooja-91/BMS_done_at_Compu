@@ -1,4 +1,7 @@
 var refCorporate = new Firebase("https://get2mygames.firebaseio.com/Corporate");
+
+var Servertime=Firebase.ServerValue.TIMESTAMP;
+
 $(function(){
     $("#datepicker1,#datepicker2,#datepicker3,#datepicker4,#datepicker5,#datepicker6,#datepicker7,#datepicker8,#datepicker9,#datepicker10,#datepicker11,#datepicker12,#datepicker13,#datepicker14,#datepicker15,#datepicker16,#datepicker17,#datepicker18,#datepicker19,#datepicker20,#datepicker21,#datepicker22,#datepicker23,#datepicker24,#datepicker25,#datepicker26,#datepicker27,#datepicker28,#datepicker29,#datepicker30").datepicker({
         format: 'dd/mm/yyyy',
@@ -2033,21 +2036,61 @@ function SavePlayer() {
     var Contact_No30 = form30.contactNo.value;
     var T_shirt_size30 = form30.shirt.value;
     var Blood_group30 = form30.blood.value;
+    
+    
+    
+    if(Role1 !== "")
+       {
+           document.cookie ="dist1="+Distance1;
+       }
+   if(Role4 !== "")
+       {
+           document.cookie ="dist2="+Distance12;
+       }
+   if(Role7 !== "")
+       {
+           document.cookie ="dist3="+Distance13;
+       }
+   if(Role10 !== "")
+       {
+           document.cookie ="dist4="+Distance14;
+       }
+   if(Role13 !== "")
+       {
+           document.cookie ="dist5="+Distance15;
+       }
+   if(Role16 !== "")
+       {
+           document.cookie ="dist6="+Distance16;
+       }
+   if(Role19 !== "")
+       {
+           document.cookie ="dist7="+Distance17;
+       }
+   if(Role22 !== "")
+       {
+           document.cookie ="dist8="+Distance18;
+       }
+   if(Role25 !== "")
+       {
+           document.cookie ="dist9="+Distance19;
+       }
+   if(Role28 !== "")
+       {
+           document.cookie ="dist10="+Distance20;
+       }
 
     /* Random Registration ID Generats */
       
-        var c = 1;
-        var d = new Date(),
-        m = d.getMilliseconds() + "",
-        u = ++d + m + (++c === 10000 ? (c = 1) : c);
-      var corpoRegid='DEC_' + u;   
-   
+      
+    var   corpoRegid="DEC_"+("0000" + (Math.random()*Math.pow(36,4) << 0)).slice(-4);
 /* registration ID Ends here*/
     
     var Participant = {
         "Participant": {
             "Corporate_name":company,
             "Registration_Id": corpoRegid,
+            "DateTime":Servertime,
             "Team1": {
                 "Participant1": {
                     "Blood_group": Blood_group1,
@@ -2445,7 +2488,9 @@ function SavePlayer() {
 
     //redirecting to payment page
      sessionStorage.setItem('type',"Corporate");
-     sessionStorage.setItem('amt',corporatePrice);
+     sessionStorage.setItem('amt',10250);
+     sessionStorage.setItem('RegistID',corpoRegid);
+    
     
     
     document.cookie="indRgi1="+corpoRegid;
