@@ -1,0 +1,120 @@
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+        margin-left: 4px;
+}
+
+th, td {
+    text-align: center;
+   
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+.navbar-inverse {
+    background-color: rgba(46, 128, 132, 0.98);
+    border-color: rgba(46, 128, 132, 0.98);
+}
+.navbar-inverse .navbar-brand {
+    color: #C7A41C;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #080808;
+}
+
+#ticketSum
+{
+    background-color: gainsboro;
+    position: absolute;
+    line-height: 1.7;
+    left: 10px;
+    right: 10px;
+    height: auto;
+    width: auto;
+    z-index: -1;
+  
+
+}
+#ticketSum h1
+{
+      border-bottom:2px solid gray;
+        font-family: serif;
+    text-transform: uppercase;
+    font-size: 22px;
+}
+#ticketSum label
+{
+    color: #777;
+    text-align: left;
+    
+}
+#hr
+{
+    
+      border-bottom:2px solid gray;
+}
+#paymentd
+{
+    background-color: white;
+    margin-top: 10px;
+}
+
+/** for pages that don't load angular but have angular templates in them. **/
+[ng\:cloak], [ng-cloak], [data-ng-cloak], [x-ng-cloak], .ng-cloak, .x-ng-cloak {
+    display: none !important;
+}
+
+@keyframes rotate360 {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@-webkit-keyframes rotate360 {
+  from { -webkit-transform: rotate(0deg); }
+  to { -webkit-transform: rotate(360deg); }
+}
+
+.spinner {
+  display:inline-block;
+  border-radius: 80px;
+  border-style: solid;
+  border-bottom-color: #3b5641;
+  border-top-color: #67b3a9;
+  border-left-color: #df7950;
+  border-right-color: #decb3f;
+  text-align: center;
+  vertical-align: middle;
+  position: relative;
+  animation: rotate360 1s linear infinite;
+  -webkit-animation: rotate360 1s linear infinite;
+
+  border-width: 8px;
+  width: 30px;
+  height: 30px;
+}
+
+/*Overlay css*/
+ #overlay {
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    background: #000;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+#loading {
+    width: 50px;
+    height: 57px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -28px 0 0 -25px;
+}
